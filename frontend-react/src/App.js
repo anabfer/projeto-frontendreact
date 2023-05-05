@@ -3,14 +3,23 @@ import './App.css';
 import Filtros from './Componentes/Filtros/Filtros';
 import Home from './Componentes/Home/Home';
 import Carrinho from './Componentes/Carrinho/Carrinho';
+import { GlobalStyle, Main } from './GlobalStyle';
+
+
+
 
 function App() {
   return (
-    <div>
+  
+    <>
+    <GlobalStyle/>
+    <Main>
       <Filtros />
       <Home />
       <Carrinho />
-    </div>
+    </Main>
+    </>
+  
   );
 }
 
