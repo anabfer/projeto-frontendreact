@@ -1,17 +1,20 @@
 import React from "react";
-import { Imagem, StyleProdutos, Botao } from "./produtosStyle";
+import { Imagem, StyleProdutos, Botao, Descricao } from "./produtosStyle";
 
-export default function Produtos() {
+
+export default function Produtos(props) {
     return(
         <StyleProdutos>
             <Imagem>
-            <p>Produto</p>
+           <img src={props.imagem} alt="src" width={254} height={278} />
             </Imagem>
-            <p>Produtos</p>
-            <p>R$ 00,00</p>
+            <Descricao>
+            <p>{props.nome}</p>
+            <p>{props.valor}</p>
             <Botao>
             <button>Adicionar ao carrinho</button>
             </Botao>
+            </Descricao>
         </StyleProdutos>
     )
 }
