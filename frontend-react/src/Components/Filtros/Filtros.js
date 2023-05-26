@@ -1,5 +1,5 @@
 import React from "react";
-import { ParteFiltros, Tudo } from "./filtrosStyle";
+import {Tudo , ParteFiltros} from "./FiltrosStyle";
 
 export default function Filtros() {
     return(
