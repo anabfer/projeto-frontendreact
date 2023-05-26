@@ -12,7 +12,8 @@ font-size: 18px;
 
 export const OsProdutos = styled.section `
 display: flex;
-flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
 
 
 `
