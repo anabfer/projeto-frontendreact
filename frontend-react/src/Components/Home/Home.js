@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Produtos from "../Produtos/Produtos";
 import { Meio, OsProdutos } from "./homeStyle";
 import roupa1 from "./roupa1.png";
@@ -7,15 +7,22 @@ import roupa3 from "./roupa3.png";
 
 
 
-export default function() {
+export default function Home() {
+
+    const [ordenacao, setOrdenacao] = useState('')
+    const mudarOrdenacao = (event) => {
+        setOrdenacao(event.target.value)
+    }
+
     return(
         <div>
             <Meio>
             <p>Quantidade de produtos: 3 </p>
-            <p>Ordenação: <select>
+            <label>Ordenação:
+                <select value={ordenacao} onChange={mudarOrdenacao}>
                 <option>Crescente</option> 
                 <option>Decrescente</option>
-            </select></p>
+            </select></label>
             </Meio>
             <OsProdutos>
 

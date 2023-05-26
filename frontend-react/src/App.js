@@ -1,28 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import Filtros from './Componentes/Filtros/Filtros';
-import Home from './Componentes/Home/Home';
-import Carrinho from './Componentes/Carrinho/Carrinho';
-import { GlobalStyle, Main } from './GlobalStyle';
 
-
-
-
-
-
-function App() {
-  return (
+  import './App.css';
+  import Filtros from './Components/Filtros/Filtros';
+  import Home from './Components/Home/Home';
+  import Carrinho from './Components/Carrinho/Carrinho';
+  import { GlobalStyle, Main } from './GlobalStyle';
+  import { useState } from 'react';
   
-    <>
-    <GlobalStyle/>
-    <Main>
-      <Filtros />
-      <Home />
-      <Carrinho />
-    </Main>
-    </>
-  
-  );
-}
+  function App() {
 
-export default App;
+    const [cart, setCart] = useState("");
+    const [amount, setamount] = useState("");
+    const [minfilter, setMinFilter] = useState("");
+    const [maxfilter, setMaxFilter] = useState("");
+    const [searchfilter, setSearchFilter] = useState("");
+    return (
+    
+      <>
+      <GlobalStyle/>
+      <Main>
+        <Filtros />
+        <Home />
+        <Carrinho />
+      </Main>
+      </>
+    
+    );
+  }
+  
+  export default App;
+  
