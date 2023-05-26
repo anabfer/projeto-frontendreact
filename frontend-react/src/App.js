@@ -5,6 +5,7 @@
   import Carrinho from './Components/Carrinho/Carrinho';
   import { GlobalStyle, Main } from './GlobalStyle';
   import { useState } from 'react';
+  import { productlist } from './Assets/productList';
   
   function App() {
 
@@ -18,9 +19,26 @@
       <>
       <GlobalStyle/>
       <Main>
-        <Filtros />
-        <Home />
-        <Carrinho />
+        <Filtros 
+        min={minfilter}
+        setMin={setMinFilter}
+        max={maxfilter}
+        setMax={setMaxFilter}
+        search={searchfilter}
+        setSearch={setSearchFilter}/>
+        
+        <Home
+        productlist={productlist}
+        amount={amount}
+        setamount={setamount}
+        cart={cart}
+        setCart={setCart} />
+        
+        <Carrinho 
+        amount={amount}
+        setamount={setamount}
+        cart={cart}
+        setCart={setCart}/>
       </Main>
       </>
     
